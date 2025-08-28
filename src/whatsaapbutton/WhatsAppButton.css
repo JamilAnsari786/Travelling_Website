@@ -1,0 +1,98 @@
+/* Floating WhatsApp Button */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;       /* ✅ slightly larger than your 65px */
+  height: 60px;
+  bottom: 14px;
+  right: 22px;
+  background: linear-gradient(135deg, #25d366, #1ebc59);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;   /* ✅ medium icon size */
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(37, 211, 102, 0.4);
+  z-index: 9999;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: pulse 1.8s infinite;
+  border: 2px solid green;
+}
+
+/* Hover effect */
+.whatsapp-float:hover {
+  transform: scale(1.12);
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.55);
+}
+
+/* WhatsApp Icon */
+.whatsapp-icon1 {
+  font-size: 34px;  /* ✅ better proportion inside 70px */
+  animation: bounce 2s infinite;
+}
+
+/* Tooltip */
+.whatsapp-float::after {
+  content: "Chat with us";
+  position: absolute;
+  bottom: 20px;
+  right: 50%;
+  transform: translateX(50%);
+  background: #1ebc59;
+  color: #fff;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Show tooltip on hover */
+.whatsapp-float:hover::after {
+  opacity: 1;
+  bottom: 85px; /* adjusted for medium size */
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 18px rgba(37, 211, 102, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+/* Bounce animation for icon */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    width: 60px;   /* ✅ smaller for mobile */
+    height: 60px;
+    bottom: 15px;
+    right: 15px;
+    font-size: 28px;
+  }
+
+  .whatsapp-icon1 {
+    font-size: 30px;
+  }
+}
