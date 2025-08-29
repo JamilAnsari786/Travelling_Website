@@ -1,6 +1,7 @@
 import React from "react";
 import "./Trips.css";
-import { FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const trips = [
   {
@@ -48,13 +49,22 @@ const trips = [
   },
 ];
 
+
 const Trips = () => {
+  const navigate = useNavigate();
+
   const handleInquiry = (trip) => {
-    const message = `Hello, I want to inquire about the ${trip.title} trip (${trip.duration}) priced at $${trip.price}.`;
+    const message = `Hello, I want to inquire about the ${trip.title} trip (${trip.duration}) priced at ₹${trip.price}.`;
     window.open(
       `https://wa.me/919643296976?text=${encodeURIComponent(message)}`,
       "_blank"
     );
+  };
+
+  const handleDetails = (tripId) => {
+    // scroll to top before navigating
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    navigate(`/details/${tripId}`);
   };
 
   return (
@@ -85,7 +95,7 @@ const Trips = () => {
                     <FaWhatsapp className="whatsapp-icon" /> Inquiry
                   </button>
                   <button
-                    onClick={() => window.open(`/details/${trip.id}`, "_blank")}
+                    onClick={() => handleDetails(trip.id)}
                     className="details-btn"
                   >
                     Details
