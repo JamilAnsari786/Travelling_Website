@@ -3,8 +3,8 @@ import Navbar from "../navbar/Navbar";
 import Footer from "../footer/Footer";
 import "./MoonYatriPage.css";
 import WhatsAppButton from "../../whatsaapbutton/WhatsAppButton";
-
-const HERO_IMAGE = "/public/img2.jpg";
+import HERO_IMAGE from "/img2.jpg";
+// const HERO_IMAGE = "/public/img2.jpg";
 
 const Counter = ({ end, duration, plus = false }) => {
   const [count, setCount] = useState(0);
