@@ -55,6 +55,7 @@ const TravelAppSection = () => {
             ✨ More About MoonYatri Traveling
           </button>
         </div>
+        
 
         {/* Right Image */}
         <div className="image-box">

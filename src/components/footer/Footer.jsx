@@ -1,15 +1,18 @@
 import React from "react";
 import "./Footer.css";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaYoutube,
-  FaLinkedinIn,
-} from "react-icons/fa";
+import { FaInstagram, FaYoutube } from "react-icons/fa";
 import { MdEmail, MdLocationOn, MdPhone } from "react-icons/md";
 import logo from "../../assets/logo-modified.png";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  const handleNavigate = (path) => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    navigate(path);
+  };
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -27,10 +30,20 @@ const Footer = () => {
             hassle-free journeys. Discover the world with style and comfort!
           </p>
           <div className="socials">
-            <a href="https://www.instagram.com/moonyatri.co/" aria-label="Instagram" target="_blank">
+            <a
+              href="https://www.instagram.com/moonyatri.co/"
+              aria-label="Instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaInstagram />
             </a>
-            <a href="https://www.youtube.com/@explorewithkevin" aria-label="YouTube" target="_blank">
+            <a
+              href="https://www.youtube.com/@explorewithkevin"
+              aria-label="YouTube"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaYoutube />
             </a>
           </div>
@@ -40,24 +53,16 @@ const Footer = () => {
         <div className="footer-section links">
           <h3>Quick Links</h3>
           <ul className="footer-menu">
-            <li>
-              <a href="#home">HOME</a>
+            <li onClick={() => handleNavigate("/")}>HOME</li>
+            <li onClick={() => handleNavigate("/aboutus/moonyatri")}>
+              ABOUT US
             </li>
-            <li>
-              <a href="#about">ABOUT US</a>
+            <li onClick={() => handleNavigate("/#trips")}>PACKAGES</li>
+            <li onClick={() => handleNavigate("/#blog")}>BLOG</li>
+            <li onClick={() => handleNavigate("/#testimonials")}>
+              TESTIMONIAL
             </li>
-            <li>
-              <a href="#trips">PACKAGES</a>
-            </li>
-            <li>
-              <a href="#blog">BLOG</a>
-            </li>
-            <li>
-              <a href="#testimonials">TESTIMONIAL</a>
-            </li>
-            <li>
-              <a href="#contact">CONTACT</a>
-            </li>
+            <li onClick={() => handleNavigate("/#contact")}>CONTACT</li>
           </ul>
         </div>
 
@@ -93,10 +98,30 @@ const Footer = () => {
       {/* Footer Bottom */}
       <div className="footer-bottom">
         <div className="footer-policies">
-          <a href="/privacy-policy">Privacy Policy</a> |
-          <a href="/terms-and-conditions"> Terms & Conditions</a> |
-          <a href="/pricing-policy"> Pricing Policy</a>
-          <hr />
+          <div className="footer-links">
+            <button
+              className="footer-link"
+              onClick={() => handleNavigate("/privacy-policy")}
+            >
+              Privacy Policy
+            </button>
+            <span className="divider">|</span>
+            <button
+              className="footer-link"
+              onClick={() => handleNavigate("/terms-and-conditions")}
+            >
+              Terms & Conditions
+            </button>
+            <span className="divider">|</span>
+            <button
+              className="footer-link"
+              onClick={() => handleNavigate("/pricing-policy")}
+            >
+              Pricing Policy
+            </button>
+          </div>
+          <hr  />
+
           <p>© {new Date().getFullYear()} MoonYatri. All Rights Reserved.</p>
         </div>
       </div>
