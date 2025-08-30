@@ -342,9 +342,7 @@
   }
 }
 
-/* Large screens (default styles already handle 1440px+) */
 
-/* Extra Large Screens */
 @media (max-width: 1440px) {
   .hero {
     grid-template-columns: 1fr 1fr;
@@ -392,7 +390,13 @@
     grid-template-columns: 1fr 1fr;
   }
   .hero-media {
-    height: 350px;
+    height: 330px;
+  }
+  .tile{
+    width: 450px;
+  }
+  .viso{
+    width: 240px;
   }
 }
 
@@ -413,6 +417,15 @@
   }
   .cta-row {
     flex-direction: column;
+  }
+  .hero{
+    width: 150px;
+  }
+
+  
+
+  .tile{
+    width: 430px;
   }
 }
 

@@ -61,8 +61,8 @@
   border-radius: 1.3rem;
   padding: 2px;
   background: linear-gradient(135deg, #313a5c9e, #110d20e9);
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -86,7 +86,6 @@
 }
 
 .testimonial-text::before {
-  content: "“";
   font-size: 2rem;
   color: #9ca3af;
   position: absolute;
@@ -104,6 +103,8 @@
 @media (min-width: 768px) {
   .testimonials-grid {
     grid-template-columns: repeat(2, 1fr);
+    margin: -10 auto;
+
   }
 }
 

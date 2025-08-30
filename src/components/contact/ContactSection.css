@@ -122,6 +122,8 @@
   }
   .contact-form {
     padding: 2rem;
+    max-width: 380px;
+    margin-left: -10px;
   }
 }
 

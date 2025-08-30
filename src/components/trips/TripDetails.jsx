@@ -56,7 +56,7 @@ const tripDetails = {
       "Travel insurance",
       "Anything not mentioned in inclusions",
     ],
-    pdf: "/pdfs/CHOPTA-CHANDERSHILLA-TUNGNATH.pdf",
+    pdf: "https://drive.google.com/file/d/1XctMncRUzrquuQNAXz7Zk764XH0hIzo_/view?usp=sharing",
   },
 
   1: {
@@ -118,7 +118,7 @@ const tripDetails = {
       "Travel insurance",
       "Anything not mentioned in inclusions",
     ],
-    pdf: "/pdfs/Tirthan-Jibhi-Jalori-2n3d.pdf",
+    pdf: "https://drive.google.com/file/d/1SaEr6J2G29Lvskxie24TdDBYLR65AaMF/view?usp=sharing",
   },
 
   3: {
@@ -192,7 +192,7 @@ const tripDetails = {
       "Travel insurance",
       "Anything not mentioned in inclusions",
     ],
-    pdf: "/pdfs/Manali-Rohtang-Kasol.pdf",
+    pdf: "https://drive.google.com/file/d/1yDbehjlXnxOASMSQc6JzRahNv6u79GHh/view?usp=sharing",
   },
 
   4: {
@@ -254,7 +254,7 @@ const tripDetails = {
       "Taxi/jeep/auto fare from parking to monuments",
       "Anything not mentioned in inclusions",
     ],
-    pdf: "/pdfs/Udaipur-Kumbalgarh-4n5d.pdf",
+    pdf: "https://drive.google.com/file/d/11ZxNZ-XluCznOKKauaMOeXHYCwYCl4Zq/view?usp=sharing",
   },
 };
 
@@ -303,7 +303,7 @@ const TripDetails = () => {
         </ul>
 
         <h3>Download Full PDF</h3>
-        <a href={details.pdf} download className="download-btn">
+        <a href={details.pdf} download target="_blank" className="download-btn">
           📥 Download Itinerary PDF
         </a>
       </div>

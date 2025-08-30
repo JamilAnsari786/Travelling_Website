@@ -105,7 +105,7 @@ export default function MoonYatriPage() {
           </p>
         </section> */}
 
-        <section className="container section">
+        <section className="container section viso">
           <h2 className="vision">🚀 Our Vision</h2>
           <p className="lead">
             Travel isn’t about ticking destinations — it’s about experiencing
