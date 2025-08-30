@@ -57,7 +57,7 @@ const Footer = () => {
             <li onClick={() => handleNavigate("/aboutus/moonyatri")}>
               ABOUT US
             </li>
-            <li onClick={() => handleNavigate("/#trips")}>PACKAGES</li>
+            <li onClick={() => handleNavigate("#trips")}>PACKAGES</li>
             <li onClick={() => handleNavigate("/#blog")}>BLOG</li>
             <li onClick={() => handleNavigate("/#testimonials")}>
               TESTIMONIAL

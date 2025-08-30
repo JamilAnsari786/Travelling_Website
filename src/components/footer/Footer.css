@@ -61,12 +61,14 @@
 
 .footer-section.links ul li {
   margin-bottom: 12px;
+  cursor: pointer;
 }
 
 .footer-section.links ul li a {
   color: black;
   text-decoration: none;
   transition: 0.3s;
+  
 }
 
 .footer-section.links ul li a:hover {
